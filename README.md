@@ -23,7 +23,7 @@
 3. **필수 준수 사항**:
    - Official Channels & GitHub 섹션 완전 제외
    - Movie Scenarios 대신 위키북스(WIKIBOOKS) 정규 라인업 탑재
-   - 맨 하단(Footer) 정보: `"당목담글(DMDG) 스튜디오 자율 에이전트 엔지니어링 본부"` 단일 문구만 기재
+   - 맨 하단(Footer) 정보: `"당목담글(DMDG) 스튜디오 자율 에이전트 엔지니어링 본부"` 및 `"대표도메인 : dmdg-live.com & malssam.com"` 기재
 
 ---
 
