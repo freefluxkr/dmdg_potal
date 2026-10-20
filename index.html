@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>DMDG LIVE (당목담글) | 공식 대표 포털 허브</title>
+  <meta name="description" content="사람과 마음을 연결하는 세상에서 가장 따뜻한 이어읽기 플랫폼. 26종 실시간 시뮬레이터, AI 에이전트, 위키독스 출판물, 소설 E-Reader, 영화 시나리오 총괄 허브.">
+  <meta name="keywords" content="당목담글, DMDG, DMDG LIVE, 말쌈, 소담 라이브, REA 역공학, 위키독스, Hamilton Kang, AI 시뮬레이터">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dmdg-live.com/">
+  <meta property="og:title" content="DMDG LIVE | 당목담글 공식 대표 포털">
+  <meta property="og:description" content="사람과 마음을 연결하는 세상에서 가장 따뜻한 이어읽기 플랫폼 - DMDG 종합 서비스 허브">
+  <meta property="og:image" content="./assets/dmdg_card_front.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/dmdg_logo_emblem.png">
+  <link rel="apple-touch-icon" href="./assets/dmdg_logo_emblem.png">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="theme-light">
+
+  <!-- Ambient Light Backdrops -->
+  <div class="ambient-glow"></div>
+
+  <div class="app-wrapper">
+    
+    <!-- =======================================================================
+         1. Top Global Navigation Bar (Header)
+         ======================================================================= -->
+    <header class="top-nav" id="topNav">
+      <a href="#hero" class="brand-wrap" title="DMDG LIVE 홈으로">
+        <img src="./assets/dmdg_logo_emblem.png" alt="DMDG 당목담글 엠블럼" class="brand-emblem-img">
+        <div class="brand-text-col">
+          <div class="brand-name">
+            <span>DMDG LIVE</span>
+            <span class="brand-badge">Official Hub</span>
+          </div>
+          <div class="brand-sub">당신의 목소리로 다음글을 읽어주세요</div>
+        </div>
+      </a>
+
+      <!-- Search Input -->
+      <div class="nav-search-box">
+        <span class="nav-search-icon">🔍</span>
+        <input type="text" id="searchInput" class="nav-search-input" placeholder="서비스, 시뮬레이터, 도서 검색...">
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="nav-actions">
+        <a href="https://malssam.com/" target="_blank" rel="noopener noreferrer" class="nav-btn" style="border-color: rgba(247, 127, 0, 0.4); color: var(--dmdg-orange);" title="말쌈 전용 독립 서비스">
+          <span>🗣️</span> <span>말쌈 전용</span>
+        </a>
+        <a href="https://dmdg-live.com/voice.html" target="_blank" rel="noopener noreferrer" class="nav-btn" style="border-color: rgba(0, 168, 150, 0.4); color: var(--dmdg-teal);" title="외국인 한국어 발음 교정 & 목소리 릴레이">
+          <span>🎙️</span> <span>발음 교정</span>
+        </a>
+        <button id="btnThemeToggle" class="nav-btn" title="테마 전환 (라이트/다크)">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">다크</span>
+        </button>
+        <a href="https://t.me/aiffall_bot" target="_blank" rel="noopener noreferrer" class="nav-btn primary" title="모바일 텔레그램 AI 관제 봇">
+          <span>🤖</span> <span>에이전트 봇</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- =======================================================================
+         2. Hero Section (Mockup 1 Signature Wave & Brand Showcase)
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <!-- 3-Layered Papercut Wave SVG Deco -->
+      <svg class="hero-wave-deco" viewBox="0 0 1440 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,64L48,85.3C96,107,192,149,288,154.7C384,160,480,128,576,112C672,96,768,96,864,117.3C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" fill="url(#hero-wave-grad)"/>
+        <defs>
+          <linearGradient id="hero-wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00A896" stop-opacity="0.85"/>
+            <stop offset="45%" stop-color="#02C39A" stop-opacity="0.5"/>
+            <stop offset="85%" stop-color="#F4A261" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#F77F00" stop-opacity="0.85"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-kicker">
+            <span class="pulse-dot"></span> NEXT-GEN AGENTIC &amp; KNOWLEDGE ECOSYSTEM
+          </div>
+          <h1 class="hero-title">
+            사람과 마음을 연결하는<br>
+            <span class="highlight">세상에서 가장 따뜻한 이어읽기 플랫폼</span>
+          </h1>
+          <div class="hero-en-slogan">
+            Connecting hearts and people – The warmest interactive storytelling platform.
+          </div>
+          <p class="hero-desc">
+            당목담글(DMDG) 스튜디오는 차세대 <strong>AI 멀티 에이전트 오케스트레이션</strong>, <strong>REA 리버스 엔지니어링 실습실</strong>, 그리고 <strong>따뜻한 인문학 지식 출판 생태계</strong>를 실시간 브라우저 기반으로 서비스하는 종합 허브입니다.
+          </p>
+
+          <!-- Live Metrics Pills -->
+          <div class="metrics-bar">
+            <div class="metric-pill">
+              <span class="pulse-dot"></span> <span>실시간 시뮬레이터 <strong>26종</strong></span>
+            </div>
+            <div class="metric-pill">
+              <span>📚</span> <span>위키독스 공식 도서 <strong>15종</strong></span>
+            </div>
+            <div class="metric-pill">
+              <span>🎬</span> <span>120분 영화 시나리오 <strong>4부작</strong></span>
+            </div>
+            <div class="metric-pill">
+              <span>🤖</span> <span>자율 AI 에이전트 <strong>12대</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Visual (Mockup 1 Emblem + QR) -->
+        <div class="hero-visual">
+          <div class="emblem-card" title="당목담글 공식 엠블럼">
+            <img src="./assets/dmdg_emblem_hq.png" alt="당목담글 원형 엠블럼">
+          </div>
+          <div class="hero-qr-badge">
+            <img src="./assets/dmdg_qr_code.png" alt="모바일 접속 QR코드">
+            <div class="hero-qr-text">
+              <span>모바일 즉시 접속</span>
+              <span>스마트폰 카메라로 스캔</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. Category Filter Tabs Bar (Mockup 2 & 3 Interactive Filtering)
+         ======================================================================= -->
+    <nav class="filter-bar">
+      <div class="filter-inner">
+        <div class="tabs-group" id="tabsGroup">
+          <button class="tab-btn active" data-filter="all">🔘 전체 서비스 (<span id="totalCount">20+</span>)</button>
+          <button class="tab-btn" data-filter="flagship">🚀 플래그십 웹앱</button>
+          <button class="tab-btn" data-filter="rea">🔬 REA 역공학 랩</button>
+          <button class="tab-btn" data-filter="saas">👔 SaaS &amp; AI 랩</button>
+          <button class="tab-btn" data-filter="math">🧮 수학 20종</button>
+          <button class="tab-btn" data-filter="books">📚 위키독스 전자책</button>
+          <button class="tab-btn" data-filter="cinema">🎬 영화 시나리오</button>
+          <button class="tab-btn" data-filter="channels">📺 공식 채널</button>
+        </div>
+        <div class="status-counter" id="statusCounter">
+          운영 서비스 7개 | 시뮬레이터 26개
+        </div>
+      </div>
+    </nav>
+
+    <!-- =======================================================================
+         4. Main Content Area & Cards Grid
+         ======================================================================= -->
+    <main class="content-container" id="mainContent">
+
+      <!-- ---------------------------------------------------------------------
+           SECTION 1: Flagship Web Apps
+           --------------------------------------------------------------------- -->
+      <section class="section-block" data-category="flagship" id="sec-flagship">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title"><span>🚀</span> 플래그십 라이브 웹 서비스</h2>
+            <p class="section-desc">브라우저에서 설치 없이 즉시 실행되는 PWA &amp; 대시보드</p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1: 당목담글 보이스 -->
+          <article class="service-card" data-category="flagship" data-title="당목담글 보이스 voice 발음교정 목소리릴레이 gemini">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: var(--dmdg-teal);">🎙️</div>
+                <span class="card-status-badge"><span class="pulse-dot"></span> Live AI PWA</span>
+              </div>
+              <h3 class="card-title">당목담글 보이스 (DMDG Voice)</h3>
+              <div class="card-subtitle">외국인 한국어 발음 교정 &amp; 감성 목소리 릴레이</div>
+              <p class="card-desc">
+                Gemini 2.5 Flash 기반 초·중·종성 발음 정밀 코칭 성적표와 전 세계 학습자를 잇는 따스한 목소리 릴레이 PWA입니다.
+              </p>
+              <ul class="card-features">
+                <li>Gemini AI 자연어 발음 평가 성적표 &amp; 점수 피드백</li>
+                <li>한/일/영 3개국어 i18n &amp; 기기 로컬 안전 저장 (Local Only)</li>
+                <li>목소리 기부 시 AI 분석 5회권 리워드 충전 &amp; PayPal 결제</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/voice.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>보이스 발음 교정 실행하기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: 말쌈 PWA -->
+          <article class="service-card" data-category="flagship" data-title="말쌈 malssam 우리말사전 퀴즈 신조어">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: var(--dmdg-orange);">🗣️</div>
+                <span class="card-status-badge"><span class="pulse-dot"></span> Live PWA</span>
+              </div>
+              <h3 class="card-title">말쌈 (MALSSAM)</h3>
+              <div class="card-subtitle">바른 우리말 AI 사전 &amp; 인터랙티브 퀴즈 배틀</div>
+              <p class="card-desc">
+                세대공감 신조어부터 바른 우리말까지, AI 번역과 문해력 동적 퀴즈를 제공하는 온디바이스 PWA 웹 서비스입니다.
+              </p>
+              <ul class="card-features">
+                <li>100대 마스터 신조어 DB &amp; 4-Era 시대 스위처 탑재</li>
+                <li>세대공감 배틀 퀴즈 &amp; 5개국(미/일/베/인/스) 에디션</li>
+                <li>IndexedDB 로컬 오프라인 완전 구동 &amp; 독립 도메인</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://malssam.com/" target="_blank" rel="noopener noreferrer" class="btn-card-action gold">
+                <span>말쌈 공식 전용관 접속하기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: 소담 라이브 -->
+          <article class="service-card" data-category="flagship" data-title="소담 sodam 감성치유 힐링 문학 firebase">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: #FF758F;">🌸</div>
+                <span class="card-status-badge"><span class="pulse-dot"></span> Firebase Live</span>
+              </div>
+              <h3 class="card-title">소담 라이브 (Sodam Web)</h3>
+              <div class="card-subtitle">마음의 온기와 치유를 전하는 감성 문학 쇼룸</div>
+              <p class="card-desc">
+                따뜻한 글귀와 마음을 보듬는 시·산문을 아름다운 음악과 함께 감상할 수 있는 감성 힐링 웹 서비스입니다.
+              </p>
+              <ul class="card-features">
+                <li>Firebase 글로벌 클라우드 독립 인프라 안정 구동</li>
+                <li>감성 비주얼 &amp; 미니멀 반응형 카드 인터랙션</li>
+                <li>위키독스 Book 21665 연계 공식 컬렉션 쇼룸</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-ut.web.app/sodam-web/" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>소담 라이브 바로가기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: DMDG 서재 -->
+          <article class="service-card" data-category="flagship" data-title="서재 novels e-reader hamilton kang 소설 tts">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: #48CAE4;">📖</div>
+                <span class="card-status-badge"><span class="pulse-dot"></span> Live Reader</span>
+              </div>
+              <h3 class="card-title">DMDG 서재 (Hamilton.Kang)</h3>
+              <div class="card-subtitle">2027 4대 대하 팩션 소설 몰입형 E-Reader</div>
+              <p class="card-desc">
+                2027년 한반도와 글로벌 사이버전을 다룬 Hamilton.Kang의 4대 팩션 스릴러 단편소설 인터랙티브 뷰어입니다.
+              </p>
+              <ul class="card-features">
+                <li>브라우저 AI 음성 낭독(TTS) 및 속도 미세 제어</li>
+                <li>다크·세피아 감성 테마 및 폰트 크기 자유 조절</li>
+                <li>문단 더블클릭 실시간 이어듣기 완전 지원</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/novels.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>DMDG 서재 열기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5: SCM MLOps 대시보드 -->
+          <article class="service-card" data-category="flagship" data-title="scm mlops 대시보드 수요예측 llm brain">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: #FFB703;">⚡</div>
+                <span class="card-status-badge"><span class="pulse-dot"></span> Live Console</span>
+              </div>
+              <h3 class="card-title">AI 에이전트 &amp; SCM MLOps</h3>
+              <div class="card-subtitle">스마트 공급망 수요 예측 &amp; 실시간 관제 콘솔</div>
+              <p class="card-desc">
+                LLM Brain과 그래프 지식 저장소를 결합하여 기업 공급망 리스크와 수요를 실시간 추론하는 전문 대시보드입니다.
+              </p>
+              <ul class="card-features">
+                <li>원클릭 공급망 그래프 노드 실시간 인터랙션</li>
+                <li>LangGraph 상태 전이 실시간 파이프라인 관제</li>
+                <li>LightGBM &amp; XGBoost 앙상블 인공지능 예측기</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/scm_dashboard.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>대시보드 콘솔 실행</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6: 방법 라이브 -->
+          <article class="service-card" data-category="flagship" data-title="방법 curse bangbeop 오컬트 스릴러 스토리텔링">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: #E63946;">🩸</div>
+                <span class="card-status-badge"><span class="pulse-dot"></span> Live Story</span>
+              </div>
+              <h3 class="card-title">방법 (Curse Bangbeop)</h3>
+              <div class="card-subtitle">한국형 미스터리 오컬트 스릴러 인터랙티브 스토리</div>
+              <p class="card-desc">
+                고대 주술과 모던 도시 괴담이 얽힌 미스터리 오컬트 스토리텔링 인터랙티브 웹 쇼케이스입니다.
+              </p>
+              <ul class="card-features">
+                <li>사운드와 비주얼이 결합된 몰입형 씬 연출</li>
+                <li>오컬트 &amp; 캐주얼 듀얼 모드 인터랙션</li>
+                <li>인터랙티브 웹 시나리오 몰입 체험 환경</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/curse_bangbeop/" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>방법 라이브 체험하기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------------
+           SECTION 2: REA Reverse Engineering Labs
+           --------------------------------------------------------------------- -->
+      <section class="section-block" data-category="rea" id="sec-rea">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title"><span>🔬</span> REA &amp; 차세대 역공학 라이브 랩 (3종)</h2>
+            <p class="section-desc">브라우저에서 직접 바이너리를 뜯어보고 해체하는 표준 실습기</p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- REA 1: 공룡 랩 -->
+          <article class="service-card" data-category="rea" data-title="크롬 공룡 랩 dino lab 역공학 book 21753">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🦖</div>
+                <span class="card-status-badge lab">Book 21753 연계</span>
+              </div>
+              <h3 class="card-title">크롬 공룡 랩 (Chrome Dino Lab)</h3>
+              <div class="card-subtitle">T-Rex 러너 게임 역공학 &amp; 실시간 패치 실습기</div>
+              <p class="card-desc">
+                크롬 오프라인 공룡 게임 코드를 분해하여 속도, 점프력, 중력을 슬라이더로 실시간 변조하고 무적 치트를 적용합니다.
+              </p>
+              <ul class="card-features">
+                <li>러너 게임 엔진 실시간 메모리 패치</li>
+                <li>자바스크립트 클론 코드 자동 추출</li>
+                <li>AI 에이전트와 함께하는 10분 소프트웨어 해체 쇼</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_dino_lab.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>공룡 랩 실행하기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- REA 2: 윈도우 계산기 랩 -->
+          <article class="service-card" data-category="rea" data-title="윈도우 계산기 랩 calc sim x86 book 21754">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🧮</div>
+                <span class="card-status-badge lab">Book 21754 연계</span>
+              </div>
+              <h3 class="card-title">윈도우 계산기 랩 (Calc Sim)</h3>
+              <div class="card-subtitle">C++ / 어셈블리 x86_64 역공학 &amp; 퍼센트 버그 패치</div>
+              <p class="card-desc">
+                Windows Calculator의 연산자 우선순위 알고리즘을 분석하고 실시간 퍼센트(%) 연산 버그를 완벽 패치합니다.
+              </p>
+              <ul class="card-features">
+                <li>IEEE 754 부동소수점 정밀도 검증기</li>
+                <li>모던 반응형 계산기 클론 웹 컴포넌트</li>
+                <li>역공학 표준 실무 바이블 연동 실습</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_calc_percent.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>계산기 랩 실행하기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- REA 3: 클린룸 TDD 검증기 -->
+          <article class="service-card" data-category="rea" data-title="클린룸 diff tdd 검증기 보안분석 book 21755">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🛡️</div>
+                <span class="card-status-badge lab">Book 21755 연계</span>
+              </div>
+              <h3 class="card-title">클린룸 TDD 검증기 (Diff Sim)</h3>
+              <div class="card-subtitle">오리지널 바이너리 vs 클린룸 TDD 바이트 디프</div>
+              <p class="card-desc">
+                오리지널 바이너리와 클린룸 재구현 TDD 코드의 실시간 바이트 디프(Byte Diff) 및 단위 테스트 무결성을 100% 검증합니다.
+              </p>
+              <ul class="card-features">
+                <li>실시간 헥사(Hex) 바이트 일치도 시각화</li>
+                <li>단위 테스트 100% 그린 플래그 자동 검증</li>
+                <li>보안 분석 및 법적 클린룸 재창조 프로토콜</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_cleanroom_diff.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>클린룸 검증기 실행</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------------
+           SECTION 3: Enterprise SaaS & AI Labs
+           --------------------------------------------------------------------- -->
+      <section class="section-block" data-category="saas" id="sec-saas">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title"><span>👔</span> 엔터프라이즈 SaaS &amp; AI 연구소 (3종)</h2>
+            <p class="section-desc">차세대 AI 에이전트와 클라우드 마이크로 SaaS 아키텍처 실습실</p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- SaaS 1: K-오피스 -->
+          <article class="service-card" data-category="saas" data-title="k-오피스 직장인 생존 지수 롤플레잉">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">👔</div>
+                <span class="card-status-badge">Live</span>
+              </div>
+              <h3 class="card-title">K-오피스 생존 연구소</h3>
+              <div class="card-subtitle">직장인 생존 지수 진단 &amp; 상사 대응 롤플레잉</div>
+              <p class="card-desc">
+                한국 직장 문화의 리얼한 상황별 생존 지수와 연봉 협상 전략을 인터랙티브하게 체험하는 AI 진단 앱입니다.
+              </p>
+              <ul class="card-features">
+                <li>영포티·꼰대·신입 세대 갈등 진단 지수</li>
+                <li>연봉 협상 시뮬레이션 파라미터 제어</li>
+                <li>인터랙티브 상황별 최적 대응 솔루션</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_k_office.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>K-오피스 시뮬레이터</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- SaaS 2: 멀티 에이전트 -->
+          <article class="service-card" data-category="saas" data-title="멀티 에이전트 콘솔 orchestrator json-rpc">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🤖</div>
+                <span class="card-status-badge">Live Console</span>
+              </div>
+              <h3 class="card-title">멀티 에이전트 관제 콘솔</h3>
+              <div class="card-subtitle">자율형 멀티 에이전트 실시간 오케스트레이션</div>
+              <p class="card-desc">
+                기획·개발·QA·배포 12대 페르소나 에이전트가 협동하여 문제를 해결하는 JSON-RPC 실시간 관제 센터입니다.
+              </p>
+              <ul class="card-features">
+                <li>실시간 에이전트 통신 상태 그래프</li>
+                <li>LangGraph 기반 비동기 파이프라인 관제</li>
+                <li>원클릭 서브에이전트 태스크 할당</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_agent_orchestrator.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>에이전트 콘솔 열기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- SaaS 3: 0원 SaaS 빌더 -->
+          <article class="service-card" data-category="saas" data-title="0원 saas 빌더 랩 cloudflare supabase">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">💰</div>
+                <span class="card-status-badge">Live</span>
+              </div>
+              <h3 class="card-title">0원 SaaS 빌더 랩</h3>
+              <div class="card-subtitle">서버 비용 0원으로 구축하는 마이크로 SaaS</div>
+              <p class="card-desc">
+                Cloudflare, Supabase, Next.js 무료 티어를 결합하여 운영비 0원으로 월 $1,000 수익을 창출하는 아키텍처 실습기입니다.
+              </p>
+              <ul class="card-features">
+                <li>인프라 원가 0원 최적화 시뮬레이션</li>
+                <li>PortOne / PayPal 글로벌 결제 파이프라인</li>
+                <li>마이크로 SaaS 런칭 체크리스트 완비</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_saas_builder.html" target="_blank" rel="noopener noreferrer" class="btn-card-action">
+                <span>SaaS 빌더 실행하기</span> <span>➔</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------------
+           SECTION 4: Math & Engineering 20 Simulators
+           --------------------------------------------------------------------- -->
+      <section class="section-block" data-category="math" id="sec-math">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title"><span>🧮</span> 수학 &amp; 머신러닝 20종 인터랙티브 시뮬레이터</h2>
+            <p class="section-desc">위키독스 Book 21701 연계 — 비전공자도 슬라이더로 조작하며 원리를 직관 체득하는 20종 웹 랩</p>
+          </div>
+          <a href="https://dmdg-live.com/sim_master_hub.html" target="_blank" rel="noopener noreferrer" class="nav-btn primary">
+            <span>🎛️ 20종 마스터 허브 전체보기 ➔</span>
+          </a>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Math 1 -->
+          <article class="service-card" data-category="math" data-title="01 텐서 놈 norm l1 l2 거리">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">📐</div>
+                <span class="card-status-badge lab">Lab 01</span>
+              </div>
+              <h3 class="card-title">01. 텐서 놈(Norm) &amp; 정규화</h3>
+              <div class="card-subtitle">L1, L2, Max Norm 기하학적 시각화</div>
+              <p class="card-desc">슬라이더로 벡터 좌표를 변경하며 L1 맨해튼 거리와 L2 유클리드 거리가 형성하는 놈 볼(Unit Ball)을 관찰합니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_math_01_tensor_norm.html" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>실습하기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Math 2 -->
+          <article class="service-card" data-category="math" data-title="02 내적 코사인 유사도 cosine similarity">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🧭</div>
+                <span class="card-status-badge lab">Lab 02</span>
+              </div>
+              <h3 class="card-title">02. 내적(Dot Product) &amp; 코사인 유사도</h3>
+              <div class="card-subtitle">임베딩 유사도 계산 원리 체득</div>
+              <p class="card-desc">두 벡터 사이의 각도와 정사영 길이를 실시간 인터랙션하며 검색 엔진과 LLM RAG의 핵심 원리를 이해합니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_math_02_dot_product.html" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>실습하기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Math 3 -->
+          <article class="service-card" data-category="math" data-title="03 어텐션 행렬곱 attention matrix transformer">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">⚡</div>
+                <span class="card-status-badge lab">Lab 03</span>
+              </div>
+              <h3 class="card-title">03. 어텐션 행렬곱 (Q·K^T)</h3>
+              <div class="card-subtitle">트랜스포머 셀프 어텐션 시각화</div>
+              <p class="card-desc">Query와 Key의 행렬곱을 통해 소프트맥스 가중치 맵이 생성되고 Value와 결합되는 과정을 한눈에 확인합니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_math_03_matrix_attention.html" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>실습하기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Math 4 -->
+          <article class="service-card" data-category="math" data-title="04 pca lora 차원 축소 주성분 분석">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">📉</div>
+                <span class="card-status-badge lab">Lab 04</span>
+              </div>
+              <h3 class="card-title">04. PCA &amp; LoRA 차원 축소</h3>
+              <div class="card-subtitle">고차원 데이터 저차원 분해</div>
+              <p class="card-desc">고유값 분해(Eigendecomposition)를 이용해 데이터 분산을 보존하며 파라미터 수를 획기적으로 줄이는 원리를 시각화합니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_math_04_pca_lora.html" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>실습하기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Math 5 -->
+          <article class="service-card" data-category="math" data-title="08 adamw 옵티마이저 optimizer gradient descent">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🎯</div>
+                <span class="card-status-badge lab">Lab 08</span>
+              </div>
+              <h3 class="card-title">08. AdamW 옵티마이저 랩</h3>
+              <div class="card-subtitle">모멘텀 + RMSProp + 가중치 감쇠</div>
+              <p class="card-desc">손실 곡면 위에서 학습률, 베타 파라미터를 조절하며 최신 LLM 표준 옵티마이저가 안장점을 탈출하는 모습을 관찰합니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_math_08_adamw_taylor.html" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>실습하기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Math 6 -->
+          <article class="service-card" data-category="math" data-title="14 langgraph 상태 전이 state graph fsm">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🔄</div>
+                <span class="card-status-badge lab">Lab 14</span>
+              </div>
+              <h3 class="card-title">14. LangGraph 상태 전이 랩</h3>
+              <div class="card-subtitle">AI 멀티 에이전트 StateGraph 시뮬레이터</div>
+              <p class="card-desc">노드 간 조건부 엣지(Conditional Edge)와 상태 리듀서(Reducer)의 작동 메커니즘을 인터랙티브하게 제어합니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://dmdg-live.com/sim_math_14_langgraph_stategraph.html" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>실습하기 ➔</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------------
+           SECTION 5: Wikidocs Official E-Books
+           --------------------------------------------------------------------- -->
+      <section class="section-block" data-category="books" id="sec-books">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title"><span>📚</span> 위키독스(Wikidocs) 공식 전자책 라인업</h2>
+            <p class="section-desc">차세대 역공학, AI 데이터 사이언스, 그리고 멀티 에이전트 표준 출판물</p>
+          </div>
+          <a href="https://dmdg.wikidocs.net/" target="_blank" rel="noopener noreferrer" class="nav-btn">
+            <span>🏛️ DMDG 위키독스 전용 브랜드 홈 ➔</span>
+          </a>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Book 1 -->
+          <article class="service-card" data-category="books" data-title="남의 앱 뜯어보기 book 21753 rea 1권">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">📕</div>
+                <span class="card-status-badge">Book 21753</span>
+              </div>
+              <h3 class="card-title">남의 앱 뜯어보기 (REA 1권)</h3>
+              <div class="card-subtitle">소스코드는 필요 없다 AI와 함께하는 소프트웨어 해체 쇼</div>
+              <p class="card-desc">공룡 게임부터 윈도우 계산기까지, 비전공자도 AI 에이전트와 함께 10분 만에 웹앱을 해체하고 패치하는 입문서.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/book/21753" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>위키독스 바로가기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Book 2 -->
+          <article class="service-card" data-category="books" data-title="리버스 엔지니어링 실전 바이블 book 21754 rea 2권">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">📘</div>
+                <span class="card-status-badge">Book 21754</span>
+              </div>
+              <h3 class="card-title">리버스 엔지니어링 실전 바이블 (REA 2권)</h3>
+              <div class="card-subtitle">AI 에이전트로 끝내는 바이너리·일렉트론·모바일 표준 실전서</div>
+              <p class="card-desc">x86 어셈블리, 정적·동적 분석, 네트워크 패킷 캡처, 그리고 모바일 리패키징까지 총망라한 실무 바이블.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/book/21754" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>위키독스 바로가기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Book 3 -->
+          <article class="service-card" data-category="books" data-title="모던 리버스 엔지니어링 클린룸 book 21755 rea 3권">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">📙</div>
+                <span class="card-status-badge">Book 21755</span>
+              </div>
+              <h3 class="card-title">모던 리버스 엔지니어링 (REA 3권)</h3>
+              <div class="card-subtitle">AI 기반 보안 분석과 클린룸 시스템 재구현</div>
+              <p class="card-desc">취약점 탐지부터 법적 리스크 없는 100% 바이트 일치 클린룸 재구현 TDD 파이프라인 심화서.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/book/21755" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>위키독스 바로가기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Book 4 -->
+          <article class="service-card" data-category="books" data-title="수학 기초 엔지니어링 book 21701 20일 완성">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">📗</div>
+                <span class="card-status-badge">Book 21701</span>
+              </div>
+              <h3 class="card-title">AI 사전 학습(수학·기초 엔지니어링)</h3>
+              <div class="card-subtitle">수포자도 이해하는 20일 완성 직관 코스</div>
+              <p class="card-desc">20종 인터랙티브 시뮬레이터와 연계되어 수식 없이 슬라이더 조작만으로 수학과 머신러닝 원리를 터득하는 교재.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/book/21701" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>위키독스 바로가기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Book 5 -->
+          <article class="service-card" data-category="books" data-title="ai와 데이터 분석 book 21658 30개 챕터">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">📊</div>
+                <span class="card-status-badge">Book 21658</span>
+              </div>
+              <h3 class="card-title">AI 와 데이터 분석 (30개 챕터)</h3>
+              <div class="card-subtitle">머신러닝·딥러닝·MLOps 전문 기술서</div>
+              <p class="card-desc">31종 인포그래픽, 22개 시뮬레이터, 스마트 SCM 최종 실무 파이프라인을 집대성한 데이터 사이언스 전문서.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/book/21658" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>위키독스 바로가기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Book 6 -->
+          <article class="service-card" data-category="books" data-title="말쌈 wikidocs book 21733 100대 마스터">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">👑</div>
+                <span class="card-status-badge">Book 21733</span>
+              </div>
+              <h3 class="card-title">말쌈 (MALSSAM) - 나랏말싸미 힙해져라</h3>
+              <div class="card-subtitle">3대 세대별 100대 마스터 신조어 계보학</div>
+              <p class="card-desc">한국 직장 문화와 세대 언어의 진화사를 흥미롭게 분석한 문화 인류학 &amp; 언어학 공식 도서.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/book/21733" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>위키독스 바로가기 ➔</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------------
+           SECTION 6: Movie Scenarios (Hamilton Kang 4-Part Blockbuster)
+           --------------------------------------------------------------------- -->
+      <section class="section-block" data-category="cinema" id="sec-cinema">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title"><span>🎬</span> 위키독스 120분 영화 시나리오 4부작</h2>
+            <p class="section-desc">총괄 저자: Hamilton.Kang | 기획: 당목담글(DMDG) 스튜디오 Great AI 출판본부</p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Cinema 1 -->
+          <article class="service-card" data-category="cinema" data-title="시나리오 1 프로토콜 2027 protocol 2027 사이버 첩보">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🌐</div>
+                <span class="card-status-badge">시나리오 I</span>
+              </div>
+              <h3 class="card-title">프로토콜 2027 (The 2027 Protocol)</h3>
+              <div class="card-subtitle">글로벌 사이버 첩보 하이테크 스릴러</div>
+              <p class="card-desc">2027년 한반도 해저 케이블 절단과 인공위성 암전 사태 속에서 펼쳐지는 국가 안보 사이버 정보전의 서스펜스.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/452410" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>시나리오 전문 보기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Cinema 2 -->
+          <article class="service-card" data-category="cinema" data-title="시나리오 2 2027 제3의 늑대 금융망 붕괴 서스펜스">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🐺</div>
+                <span class="card-status-badge">시나리오 II</span>
+              </div>
+              <h3 class="card-title">2027 제3의 늑대 (The Third Wolf)</h3>
+              <div class="card-subtitle">글로벌 금융망 붕괴 팩션 서스펜스</div>
+              <p class="card-desc">월스트리트 초단타 매매 알고리즘과 국제 결제망 스위프트(SWIFT)를 노리는 보이지 않는 금융 늑대들의 암투.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/452411" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>시나리오 전문 보기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Cinema 3 -->
+          <article class="service-card" data-category="cinema" data-title="시나리오 3 태양의 제국을 넘어 지정학 하이테크 팩션">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">☀️</div>
+                <span class="card-status-badge">시나리오 III</span>
+              </div>
+              <h3 class="card-title">태양의 제국을 넘어 (Beyond the Sun)</h3>
+              <div class="card-subtitle">지정학적 하이테크 팩션 대하 드라마</div>
+              <p class="card-desc">동아시아 반도체 공급망 패권과 우주 태양광 발전 주도권을 둘러싸고 벌어지는 치열한 외교와 기술 전쟁.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/453666" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>시나리오 전문 보기 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Cinema 4 -->
+          <article class="service-card" data-category="cinema" data-title="시나리오 4 사일런트 킬체인 사이버 자율방어전">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap">🛡️</div>
+                <span class="card-status-badge">시나리오 IV</span>
+              </div>
+              <h3 class="card-title">사일런트 킬체인 (Silent Killchain)</h3>
+              <div class="card-subtitle">차세대 사이버 자율방어전 액션 스릴러</div>
+              <p class="card-desc">인간의 개입 없이 밀리초 단위로 공격과 방어를 수행하는 자율형 킬체인 AI 시스템의 통제권 탈환 작전.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://wikidocs.net/453667" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>시나리오 전문 보기 ➔</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------------
+           SECTION 7: Official Channels & Community
+           --------------------------------------------------------------------- -->
+      <section class="section-block" data-category="channels" id="sec-channels">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <h2 class="section-title"><span>📺</span> 공식 유튜브 &amp; 모바일 관제 커뮤니티</h2>
+            <p class="section-desc">당목담글 스튜디오의 최신 영상, 역사 다큐, 그리고 24시간 실시간 텔레그램 관제망</p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Youtube 1 -->
+          <article class="service-card" data-category="channels" data-title="유튜브 당목담글 dmdg-free 오디오북">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: #FF0000;">🎬</div>
+                <span class="card-status-badge">YouTube 1</span>
+              </div>
+              <h3 class="card-title">당목담글 공식 채널 (@dmdg-free)</h3>
+              <div class="card-subtitle">공식 오디오북 &amp; 감성 문학 낭독 영상</div>
+              <p class="card-desc">마음을 어루만지는 힐링 문학과 따스한 목소리 릴레이 오디오북 및 숏폼/롱폼 감성 영상 콘텐츠입니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://www.youtube.com/@dmdg-free" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>유튜브 채널 방문 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Youtube 2 -->
+          <article class="service-card" data-category="channels" data-title="유튜브 anti-korea 역사 다큐 한국문화">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: #FF0000;">🏛️</div>
+                <span class="card-status-badge">YouTube 2</span>
+              </div>
+              <h3 class="card-title">Anti-Korea 공식 채널 (@Anti-Korea)</h3>
+              <div class="card-subtitle">한국 역사·문화 이면 탐구 &amp; 덕수궁·광화문 다큐</div>
+              <p class="card-desc">한국의 유구한 역사와 덕수궁, 광화문의 깊이 있는 역사적 진실과 문화적 이면을 추적하는 전문 다큐멘터리 채널입니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://www.youtube.com/@Anti-Korea" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>유튜브 채널 방문 ➔</span></a>
+            </div>
+          </article>
+
+          <!-- Telegram Bot -->
+          <article class="service-card" data-category="channels" data-title="텔레그램 telegram aiffall_bot 에이전트 모바일">
+            <div>
+              <div class="card-top">
+                <div class="card-icon-wrap" style="color: #0088CC;">🤖</div>
+                <span class="card-status-badge">Telegram</span>
+              </div>
+              <h3 class="card-title">Great AI 팀 봇 (@aiffall_bot)</h3>
+              <div class="card-subtitle">12대 마스터 AI 에이전트 실시간 모바일 관제망</div>
+              <p class="card-desc">작업 현황 일일 보고, 긴급 알림, 그리고 사장님의 원격 지시를 모바일에서 실시간으로 수신하는 통합 봇입니다.</p>
+            </div>
+            <div class="card-footer-action">
+              <a href="https://t.me/aiffall_bot" target="_blank" rel="noopener noreferrer" class="btn-card-action"><span>텔레그램 봇 연결 ➔</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------------
+           Business Card Identity Showcase (Mockup 1 & Back Card Details)
+           --------------------------------------------------------------------- -->
+      <section class="card-story-banner">
+        <img src="./assets/dmdg_logo_emblem.png" alt="당목담글 엠블럼" class="banner-emblem">
+        <div class="banner-quote">
+          "사람과 마음을 연결하는<br>세상에서 가장 따뜻한 이어읽기 플랫폼"
+        </div>
+        <div class="banner-subquote">
+          당신의 목소리로 다음글을 읽어주세요 — 당목담글(DMDG)
+        </div>
+        <div class="banner-business-details">
+          <div class="business-item"><span>🏛️</span> <strong>CEO Hamilton Kang</strong></div>
+          <div class="business-item"><span>📞</span> <span>010-1470-2926</span></div>
+          <div class="business-item"><span>✉️</span> <span>aiffall@naver.com</span></div>
+          <div class="business-item"><span>📍</span> <span>경기도 고양시 일산동구 중산동 1842</span></div>
+          <div class="business-item"><span>🌐</span> <span>dangmokstory.com</span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =======================================================================
+         5. Footer
+         ======================================================================= -->
+    <footer class="app-footer">
+      <div class="footer-inner">
+        <div class="footer-links-grid">
+          <a href="https://www.youtube.com/@dmdg-free" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+            <span>🎬</span> 유튜브: 당목담글 (@dmdg-free)
+          </a>
+          <a href="https://www.youtube.com/@Anti-Korea" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+            <span>🏛️</span> 유튜브: Anti-Korea (@Anti-Korea)
+          </a>
+          <a href="https://t.me/aiffall_bot" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+            <span>🤖</span> 텔레그램: Great AI 봇 (@aiffall_bot)
+          </a>
+          <a href="https://github.com/freefluxkr/dmdg_potal" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+            <span>📦</span> GitHub: freefluxkr/dmdg_potal
+          </a>
+          <a href="https://malssam.com/" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+            <span>🗣️</span> 말쌈 (malssam.com)
+          </a>
+          <a href="https://dmdg-ut.web.app/sodam-web/" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+            <span>🌸</span> 소담 (sodam-web)
+          </a>
+        </div>
+        <div class="footer-copy">
+          <p>© 2026 DMDG (당목담글) 스튜디오 Great AI 출판본부. All Rights Reserved.</p>
+          <p>공식 대표 도메인: <strong>dmdg-live.com</strong> &amp; <strong>malssam.com</strong> | Repository: <strong>freefluxkr/dmdg_potal</strong></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =======================================================================
+         6. Floating Mobile QR Widget
+         ======================================================================= -->
+    <div class="floating-qr-widget" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="모바일 즉시 접속 QR">
+      <img src="./assets/dmdg_qr_code.png" alt="QR코드" class="floating-qr-img">
+      <div class="floating-qr-meta">
+        <span>모바일 즉시 접속</span>
+        <span>스마트폰 카메라 스캔 ➔</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="./app.js"></script>
+</body>
+</html>
