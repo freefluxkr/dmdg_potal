@@ -208,29 +208,40 @@ a {
 }
 
 .nav-link-btn {
-  padding: 0.45rem 0.9rem;
+  padding: 0.45rem 1rem;
   border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0B1B3D; /* 오렌지 배경 위에서 100% 또렷하게 보이는 딥 네이비 글씨 */
+  background: #FFFFFF; /* 솔리드 화이트 알약 배경 */
+  border: 1.5px solid rgba(11, 27, 61, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  text-decoration: none;
 }
 
 .nav-link-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #0B1B3D;
+  color: #FFFFFF;
+  border-color: #0B1B3D;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(11, 27, 61, 0.25);
 }
 
 .nav-link-btn.highlight {
-  background: linear-gradient(135deg, var(--dmdg-orange), #E85D04);
-  border: none;
-  box-shadow: 0 4px 12px rgba(247, 127, 0, 0.35);
+  background: #0B1B3D; /* 말쌈 전용관: 딥 네이비 강조 */
+  color: #FFFFFF;      /* 선명한 화이트 글씨 */
+  border: 1.5px solid #0B1B3D;
+  box-shadow: 0 4px 14px rgba(11, 27, 61, 0.35);
+}
+
+.nav-link-btn.highlight:hover {
+  background: #00A896;
+  border-color: #00A896;
+  color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -793,6 +804,27 @@ a {
   }
   .header-search {
     width: 100%;
+  }
+  .header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .nav-link-btn {
+    font-size: 0.85rem;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    color: #0B1B3D;
+    background: #FFFFFF;
+    border: 1.5px solid rgba(11, 27, 61, 0.25);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .nav-link-btn.highlight {
+    background: #0B1B3D;
+    color: #FFFFFF;
+    border-color: #0B1B3D;
   }
   .hero-emblem-large {
     width: 140px;
